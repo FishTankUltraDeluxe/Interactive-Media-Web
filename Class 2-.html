@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+	<head>
+	
+		<title>Oh no</title>
+
+		<style>
+		
+			html,body {
+				margin:0;
+			}
+
+			#box {
+				width:		500px;
+				height:		500px;
+				background:	lemonchiffon;
+				padding:	10px;
+				border:		5px double lightgreen;
+				margin:		10px;
+				box-sizing:	border-box;
+				text-align: center;
+			}
+
+			#image {
+				width:100%;
+				height:100%;
+				background-color: #f4511e;
+  				border: none;
+  				color: white;
+  				opacity: 0;
+  				transition: 0.3s;
+  				position:relative;
+			}
+
+			#image:hover {
+				opacity:1;
+			}
+
+			.ohNo{
+				text-align:center;
+				clear:both;
+				height:100px;
+			}
+			.floater {
+				position:relative;
+				float: left;
+				height: 50%;
+				width: 100%;
+				padding: 50% 0 50% 0;
+			}
+
+		</style>
+	
+
+
+	</head>
+
+	<body>
+
+		<div id="box" id="image">
+			<img src="https://cdn.discordapp.com/attachments/158098380252381184/490669876633927691/1537045026842.png" id="image">
+			<div class="floater">
+				<div class="ohNo">Oh no</div>
+			</div>
+		</div>
+
+		<div id="box">
+			...
+		</div>
+
+	</body>
+
+
+</html>
