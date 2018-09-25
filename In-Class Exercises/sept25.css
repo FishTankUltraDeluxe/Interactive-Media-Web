@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+#noteTitle {
+	font-weight: bold;
+}
+
+li {
+	font-family: 'Montserrat',sans-serif;
+}
+
+#fontSize {
+	font-size: 4px;
+}
+
+#fontStyle {
+	font-style: oblique;
+}
+
+#fontVar {
+	font-variant: small-caps;
+	font: 15px;
+}
+
+#lineHeight {
+	line-height: 5em;
+}
+
+#letterSpace{
+	letter-spacing: 12px;
+}
+
+#alignThis {
+	text-align: right;
+	text-decoration: underline;
+}
+
+#indentThis {
+	text-indent: 50%;
+}
+
+#justifyTime {
+	text-align: justify;
+	text-justify: auto;
+}
+
+#transformIt {
+	text-transform: capitalize;
+}
