@@ -1,0 +1,26 @@
+body, head {
+	min-height: 100vh;
+}
+
+#bigDiv {
+
+	width: 100px;
+	height: 100px;
+	background: black;
+	color: white;
+	padding: 20%;
+	display:block;
+	float:left;
+
+}
+
+#balloon {
+
+	width:100px;
+	height:100px;
+	border-radius:50px;
+	background:black;
+	display:block;
+	float:right;
+
+}
