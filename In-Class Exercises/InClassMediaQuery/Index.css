@@ -1,0 +1,67 @@
+body {
+
+	min-height: 100px;
+	margin: 0;
+
+}
+
+#container {
+
+	width: 75%;
+	height: 100px;
+	background: black;
+	margin: auto;
+
+}
+
+#image {
+
+	width: 50%;
+	margin: auto;
+	padding: 0 25%;
+
+}
+
+.menu {
+
+	width: 100%;
+	position:fixed;
+	top: 0;
+	background: yellow;
+	height: 40px;
+
+}
+
+#text1, #text2 {
+
+	font-size: 40px;
+	text-align: center;
+	padding: 10% 0;
+
+}
+
+@media (max-width:800px) {
+
+	body {
+
+		background: green;
+
+	}
+
+	#text1 {
+
+		display:none;
+
+	}
+
+}
+
+@media (min-width:800px) {
+
+	.menu, #text2 {
+
+		display:none;
+
+	}
+
+}

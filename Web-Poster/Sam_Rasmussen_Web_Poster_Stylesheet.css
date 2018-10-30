@@ -1,5 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900');
 
+@media (min-width: 1460px) {
+
+	#putTogether {
+
+		transform: rotate(0deg);
+	    position: inherit;
+	    left: auto;
+	    top: auto;
+	    font-weight: 500;
+	    font-size: 12px;
+	    display: inline-block;		
+
+	}
+
+} 
+
+@media (min-width: 1330px) {
+
+	#sectionsContainer,	#mainHeader, #scheduleItems  {
+
+		display:block;
+
+	}
+	
+} 
+
 body, p, h1, h2, h3, h4 {
 	margin: 0;
 }

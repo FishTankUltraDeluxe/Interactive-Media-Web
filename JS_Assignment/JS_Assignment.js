@@ -27,6 +27,7 @@ function spawnChar(upperLetter, lowerLetter) {
 	lowerOrUpper = (Math.ceil(Math.random() * 2))
 	newFontSize = (Math.ceil(Math.random() * 400))
 	newColor = hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)];
+	newColor = "#000000"
 	newLeftPos = (Math.ceil(Math.random() * maxWidth))
 	newTopPos = (Math.ceil(Math.random() * maxHeight))
 	newRotation = (Math.ceil(Math.random() * 359))
@@ -154,6 +155,10 @@ $('body').keydown(function(event) {
 	case 90:
 		spawnChar ('Z','z')
 		console.log('[Z] key was pressed');
+
+		// $("p")
+		// 	.attr("style","position:static; display:inline;");
+
 		break;
 
 	}
