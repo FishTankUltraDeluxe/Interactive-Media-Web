@@ -14,14 +14,23 @@ var newFontFace = 'null'
 var maxHeight = $(window).height();
 var maxWidth = $(window).width();
 
+//This was some big cleanup on this one. Generate a random hex-code for colors and return the value as requested. 
+//I originally had this code in quite a few places, once I learned how the return function worked I immediately did this to clean up a lot of messy code because let's be real, this is a mess to look at
+
+function randomHex() {
+
+	return hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)]		
+
+}
+
 //Randomize starting text font, font color, and background color
 $(document).ready(function () {
 
-	newColor = hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)];
+	newColor = randomHex();
 	console.log('Random Color Activated, new text color is ' + newColor)
 	$('p').css('color', newColor)
 
-	newBackground = '#' + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)];
+	newBackground = '#' + randomHex();
 	console.log('Background Activated, New Color is ' + newBackground)
 	$('body').css('background', newBackground)	
 
@@ -186,13 +195,12 @@ function codeChecker (currentCode) {
 			
 			case 'COLOR': 
 
-				newTextColor = '#' + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)];
+				newTextColor = '#' + randomHex();
 				console.log('Random Color Code Activated, new text color is ' + newTextColor)
 				$('p').css('color', newTextColor)
 				
 				//And then make the text that is typed after a different color
-				newColor = 
-				hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)];
+				newColor = randomHex();
 
 				codeArray = [];
 				break;	
@@ -208,7 +216,7 @@ function codeChecker (currentCode) {
 			break;	
 			
 			case 'BACK': 
-				newBackground = '#' + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)];
+				newBackground = "#" + randomHex();
 				console.log('Background Code Activated, New Color is ' + newBackground)
 				$('body').css('background', newBackground)
 				codeArray = [];
