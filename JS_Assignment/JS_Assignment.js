@@ -1,37 +1,39 @@
+//Variables for reading which key was pressed
 var whichKey = 0
 var keyValue = 'null'
 var hexArray = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f' ];
-var fontArray = ['Abril+Fatface','Acme','Anton','Bree+Serif','Cabin','Fira+Sans','Gloria+Hallelujah','Lobster','Mali','Merriweather','Noto+Sans+JP','Open+Sans','Oswald','Pacifico','Patrick+Hand','Playfair+Display','Righteous','Roboto','Roboto+Mono','Roboto+Slab','Shadows+Into+Light','Source+Code+Pro','Spicy+Rice','Suwannaphum','Varela+Round']
+var fontArray = ['Abril+Fatface','Acme','Anton','Bree+Serif','Cabin','Fira+Sans','Gloria+Hallelujah','Lobster','Mali','Merriweather','Noto+Sans+JP','Open+Sans','Oswald','Pacifico','Patrick+Hand','Playfair+Display','Righteous','Roboto','Roboto+Mono','Roboto+Slab','Shadows+Into+Light','Source+Code+Pro','Spicy+Rice','Suwannaphum','Varela+Round','Advent+Pro','Aldrich','Amatic+SC','Covered+By+Your+Grace','Federant','Fredoka+One','Fugaz+One','Homemade+Apple','Julius+Sans+One','Jura','Luckiest+Guy','Monoton','Neucha','Permanent+Marker','Poller+One','Press+Start+2P','Russo+One','Sigmar+One','Special+Elite','Titan+One','Yanone+Kaffeesatz']
 
+//Variables for spawnChar function
+var newFontSize = 'null'
+var newColor = '#000'
+var newLeftPos = 0
+var newTopPos = 0
+var newRotation = 90
+var newFontFace = 'null'
+var maxHeight = $(window).height();
+var maxWidth = $(window).width();
 
-newFontSize = 'null'
-newColor = 'null'
-newLeftPos = 0
-newTopPos = 0
-newRotation = 90
-newFontFace = 'null'
-maxHeight = $(window).height();
-maxWidth = $(window).width();
-// console.log ('New Window Size: ' + maxHeight + ' height & ' + maxWidth + ' wide')
-
+//If the window is resized, set new maximum bounds for letter-spawning
 $(window).resize(function() {
 
 	maxHeight = $(window).height();
 	maxWidth = $(window).width();
-	// console.log ('New Window Size: ' + maxHeight + ' height & ' + maxWidth + ' wide')
 
 })
 
+//Function called when a key is pressed. Generate random values for position, rotation, typeface, color, and other relevant items, and append it to the html file
 function spawnChar(upperLetter, lowerLetter) {
 
 	lowerOrUpper = (Math.ceil(Math.random() * 2))
 	newFontSize = (Math.ceil(Math.random() * 400))
-	newColor = hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)];
-	newColor = "#000000"
+	// newColor = hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)];
 	newLeftPos = (Math.ceil(Math.random() * maxWidth))
 	newTopPos = (Math.ceil(Math.random() * maxHeight))
 	newRotation = (Math.ceil(Math.random() * 359))
-	newFontFace = fontArray[Math.ceil(Math.random() * 24)]
+	newFontFace = fontArray[Math.ceil(Math.random() * fontArray.length)]
+	console.log(fontArray.length)
+	console.log(newFontFace)
 
 	if (lowerOrUpper == 1) {
 
@@ -45,6 +47,188 @@ function spawnChar(upperLetter, lowerLetter) {
 
 }
 
+//Variables for secrectCode function
+var codeArray = [];
+var codeConcat = 'null'
+
+//Functions called to check if the correct sequence of characters is being pressed to activate a secret code that will modify the visual appearance of the screen. The first is a switch to check the number of characters currently stored in the array. In each case, it concats the existing elements of the array and checks if the stored string is correct.
+
+function secretCode(character)  {
+
+		//This switch inserts the most recently pressed character into the array, concatonates the array, and logs the results to the console
+		switch (codeArray.length) {
+
+			case 0:
+				codeArray.push(character)
+				codeConcat = codeArray[0];
+				console.log(codeConcat);
+				codeChecker (codeConcat);
+				break;
+			case 1:
+				codeArray.push(character)
+				codeConcat = codeArray[0] + codeArray[1];
+				console.log(codeConcat);
+				codeChecker (codeConcat);
+				break;
+				break;
+			case 2:
+				codeArray.push(character)
+				codeConcat = codeArray[0] + codeArray[1] + codeArray[2];
+				console.log(codeConcat);
+				codeChecker (codeConcat);
+				break;				
+			case 3:
+				codeArray.push(character)
+				codeConcat = codeArray[0] + codeArray[1] + codeArray[2] + codeArray[3];
+				console.log(codeConcat);
+				codeChecker (codeConcat);
+				break;				
+			case 4:
+				codeArray.push(character)			
+				codeConcat = codeArray[0] + codeArray[1] + codeArray[2] + codeArray[3] + codeArray[4];
+				console.log(codeConcat);
+				codeChecker (codeConcat);
+				break;				
+			case 5:
+				console.log('Array is at max!')
+				break;							
+						
+		}
+
+}
+
+//These are the following codes that we will use for this bit. Typing these codes will activate its listed effect:
+	// Spin: 	Spin letters around once
+	// Color: 	Change the text color to a random value
+	// Back: 	Change the background color to a random value
+	// List: 	Reset the text to show an in-line list of characters
+	// Reset: 	Clear screen
+
+//This function is a case switch that allows for the codes to be entered. If an incorrect character is entered, it clears the code array. If the correct sequence is entered, run the appropriate code to accomplish the intended effect, then clear the array.
+
+function codeChecker (currentCode) {
+
+	var codeConcat = currentCode;
+
+	switch (codeConcat) {
+
+		case 'S': 
+			// //console.log('String is valid')
+			break;	
+		case 'SP': 
+			//console.log('String is valid')
+			break;	
+		case 'SPI': 
+			//console.log('String is valid')
+			break;	
+		
+			case 'SPIN': 
+				console.log('Spin Text Code Activated')
+
+				$('p').animate(
+				    { deg: 360 },
+				    {
+				      duration: 300,
+				      step: function(now) {
+				        $(this).css({ transform: 'rotate(' + now + 'deg)' });
+				      }
+				    }
+				  );
+
+				//Spinning solution pulled from Hideyuki Tabata on Codepen | https://codepen.io/seeker5084/pen/VMQGwX/
+
+				codeArray = [];
+				break;	
+
+		case 'C': 
+			//console.log('String is valid')
+			break;	
+		case 'CO': 
+			//console.log('String is valid')
+			break;	
+		case 'COL': 
+			//console.log('String is valid')
+			break;	
+		case 'COLO': 
+			//console.log('String is valid')
+			break;	
+			
+			case 'COLOR': 
+
+				newTextColor = '#' + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)];
+				console.log('Random Color Code Activated, new text color is ' + newTextColor)
+				$('p').css('color', newTextColor)
+				
+				//And then make the text that is typed after a different color
+				newColor = 
+				hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)];
+
+				codeArray = [];
+				break;	
+
+		case 'B': 
+			//console.log('String is valid')
+			break;	
+		case 'BA': 
+			//console.log('String is valid')
+			break;	
+		case 'BAC': 
+			//console.log('String is valid')
+			break;	
+			
+			case 'BACK': 
+				newBackground = '#' + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)];
+				console.log('Background Code Activated, New Color is ' + newBackground)
+				$('body').css('background', newBackground)
+				codeArray = [];
+				break;	
+
+		case 'L': 
+			//console.log('String is valid')
+			break;	
+		case 'LI': 
+			//console.log('String is valid')
+			break;	
+		case 'LIS': 
+			//console.log('String is valid')
+			break;	
+			
+			case 'LIST': 
+				console.log('List Code Activated')
+				$('p').attr("style","position:static; display:inline;");
+
+				codeArray = [];
+				break;
+
+		case 'R': 
+			//console.log('String is valid')
+			break;	
+		case 'RE': 
+			//console.log('String is valid')
+			break;	
+		case 'RES':
+			//console.log('String is valid') 
+			break;	
+		case 'RESE': 
+			//console.log('String is valid')
+			break;
+			
+			case 'RESET': 
+				console.log('Reset Code Activated')
+				$('p').remove();
+				codeArray = [];
+				break;
+
+		default:
+			console.log('String is invalid, resetting')
+			codeArray = [];
+			break;
+
+	}
+
+}
+
+//This event triggers when a key is pressed. It checks which key was pressed, then using a switch-case calls the spawnChar function and inserts the appropriate characters into the function
 $('body').keydown(function(event) {
 
 	whichKey = event.which
@@ -55,110 +239,132 @@ $('body').keydown(function(event) {
 	case 65: 
 		spawnChar ('A','a')
 		console.log('[A] key was pressed');
+		secretCode('A')
 		break;
 	case 66:
 		spawnChar ('B','b')
 		console.log('[B] key was pressed');
+		secretCode('B')
 		break;
 	case 67:
 		spawnChar ('C','c')
 		console.log('[C] key was pressed');
+		secretCode('C')
 		break;
 	case 68:
 		spawnChar ('D','d')
 		console.log('[D] key was pressed');
+		secretCode('D')		
 		break;
 	case 69:
 		spawnChar ('E','e')
 		console.log('[E] key was pressed');
+		secretCode('E')		
 		break;				
 	case 70:
 		spawnChar ('F','f')
 		console.log('[F] key was pressed');
+		secretCode('F')		
 		break;				
 	case 71:
 		spawnChar ('G','g')
 		console.log('[G] key was pressed');
+		secretCode('G')		
 		break;
 	case 72:
 		spawnChar ('H','h')
 		console.log('[H] key was pressed');
+		secretCode('H')		
 		break;
 	case 73:
 		spawnChar ('I','i')
 		console.log('[I] key was pressed');
+		secretCode('I')		
 		break;
 	case 74:
 		spawnChar ('J','j')
 		console.log('[J] key was pressed');
+		secretCode('J')		
 		break;
 	case 75:
 		spawnChar ('K','k')
 		console.log('[K] key was pressed');
+		secretCode('K')		
 		break;
 	case 76:
 		spawnChar ('L','l')
 		console.log('[L] key was pressed');
+		secretCode('L')		
 		break;
 	case 77:
 		spawnChar ('M','m')
 		console.log('[M] key was pressed');
+		secretCode('M')		
 		break;
 	case 78:
 		spawnChar ('N','n')
 		console.log('[N] key was pressed');
+		secretCode('N')		
 		break;
 	case 79:
 		spawnChar ('O','o')
 		console.log('[O] key was pressed');
+		secretCode('O')		
 		break;
 	case 80:
 		spawnChar ('P','p')
 		console.log('[P] key was pressed');
+		secretCode('P')		
 		break;
 	case 81:
 		spawnChar ('Q','q')
 		console.log('[Q] key was pressed');
+		secretCode('Q')		
 		break;
 	case 82:
 		spawnChar ('R','r')
 		console.log('[R] key was pressed');
+		secretCode('R')		
 		break;
 	case 83:
 		spawnChar ('S','s')
 		console.log('[S] key was pressed');
+		secretCode('S')		
 		break;
 	case 84:
 		spawnChar ('T','t')
 		console.log('[T] key was pressed');
+		secretCode('T')		
 		break;
 	case 85:
 		spawnChar ('U','u')
 		console.log('[U] key was pressed');
+		secretCode('U')		
 		break;
 	case 86:
 		spawnChar ('V','v')
 		console.log('[V] key was pressed');
+		secretCode('V')		
 		break;
 	case 87:
 		spawnChar ('W','w')
 		console.log('[W] key was pressed');
+		secretCode('W')		
 		break;
 	case 88:
 		spawnChar ('X','x')
 		console.log('[X] key was pressed');
+		secretCode('X')		
 		break;
 	case 89:
 		spawnChar ('Y','y')
 		console.log('[Y] key was pressed');
+		secretCode('Y')		
 		break;
 	case 90:
 		spawnChar ('Z','z')
 		console.log('[Z] key was pressed');
-
-		// $("p")
-		// 	.attr("style","position:static; display:inline;");
-
+		secretCode('Z')
 		break;
 
 	}
