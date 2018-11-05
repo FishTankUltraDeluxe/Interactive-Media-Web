@@ -2,17 +2,46 @@
 var whichKey = 0
 var keyValue = 'null'
 var hexArray = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f' ];
-var fontArray = ['Abril+Fatface','Acme','Anton','Bree+Serif','Cabin','Fira+Sans','Gloria+Hallelujah','Lobster','Mali','Merriweather','Noto+Sans+JP','Open+Sans','Oswald','Pacifico','Patrick+Hand','Playfair+Display','Righteous','Roboto','Roboto+Mono','Roboto+Slab','Shadows+Into+Light','Source+Code+Pro','Spicy+Rice','Suwannaphum','Varela+Round','Advent+Pro','Aldrich','Amatic+SC','Covered+By+Your+Grace','Federant','Fredoka+One','Fugaz+One','Homemade+Apple','Julius+Sans+One','Jura','Luckiest+Guy','Monoton','Neucha','Permanent+Marker','Poller+One','Press+Start+2P','Russo+One','Sigmar+One','Special+Elite','Titan+One','Yanone+Kaffeesatz']
+var fontArray = ['Amatic SC','Anton','Baloo Bhaijaan','Bangers','Caveat Brush','Hanalei Fill','Kumar One Outline','Leckerli One','Lilita One','Limelight','Luckiest Guy','Mali','Merriweather','Monoton','Montserrat','Oswald','Pacifico','Pattaya','Playfair Display','Poiret One','Poller One','Poor Story','Press Start 2P','Raleway','Roboto','Roboto Mono','Roboto Slab','Rock Salt','Sigmar One','Spicy Rice','Titan One','Ubuntu']
 
 //Variables for spawnChar function
 var newFontSize = 'null'
-var newColor = '#000'
+var newColor = 'null'
 var newLeftPos = 0
 var newTopPos = 0
 var newRotation = 90
 var newFontFace = 'null'
 var maxHeight = $(window).height();
 var maxWidth = $(window).width();
+
+//Randomize starting text font, font color, and background color
+$(document).ready(function () {
+
+	newColor = hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)];
+	console.log('Random Color Activated, new text color is ' + newColor)
+	$('p').css('color', newColor)
+
+	newBackground = '#' + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)];
+	console.log('Background Activated, New Color is ' + newBackground)
+	$('body').css('background', newBackground)	
+
+	var newFont = fontArray[Math.ceil(Math.random() * fontArray.length)]
+	$('#startText').attr("style","font-family: " + newFont + "; color: #" + newColor + ";");
+
+	setInterval(
+		function() {
+
+			var i = 1
+
+			if (i == 1) {
+
+				i = i+1
+				newFont = fontArray[Math.ceil(Math.random() * fontArray.length)]
+				$('#startText').attr("style","font-family: " + newFont + "; color: #" + newColor + ";");
+
+			}},1000);
+
+});
 
 //If the window is resized, set new maximum bounds for letter-spawning
 $(window).resize(function() {
@@ -25,6 +54,7 @@ $(window).resize(function() {
 //Function called when a key is pressed. Generate random values for position, rotation, typeface, color, and other relevant items, and append it to the html file
 function spawnChar(upperLetter, lowerLetter) {
 
+	$('#startText').remove()
 	lowerOrUpper = (Math.ceil(Math.random() * 2))
 	newFontSize = (Math.ceil(Math.random() * 400))
 	// newColor = hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)] + hexArray[Math.ceil(Math.random() * 15)];
@@ -55,7 +85,8 @@ var codeConcat = 'null'
 
 function secretCode(character)  {
 
-		//This switch inserts the most recently pressed character into the array, concatonates the array, and logs the results to the console
+		//This switch inserts the most recently pressed character into the array, concatonates the array, and logs the results to the console. It then compares its result with the codeChecker function using its switch-case terms to determine if a code has been entered correctly or not.
+
 		switch (codeArray.length) {
 
 			case 0:
@@ -217,6 +248,7 @@ function codeChecker (currentCode) {
 				console.log('Reset Code Activated')
 				$('p').remove();
 				codeArray = [];
+				$('#contentBox').append('<div id="startText" style="color: #' + newColor + '">Press any letter key to start!</div>')
 				break;
 
 		default:

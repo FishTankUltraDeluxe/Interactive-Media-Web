@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Anton|Baloo+Bhaijaan|Bangers|Caveat+Brush|Hanalei+Fill|Kumar+One+Outline|Leckerli+One|Lilita+One|Limelight|Luckiest+Guy|Mali|Merriweather|Monoton|Montserrat|Oswald|Pacifico|Pattaya|Playfair+Display|Poiret+One|Poller+One|Poor+Story|Press+Start+2P|Raleway|Roboto|Roboto+Mono|Roboto+Slab|Rock+Salt|Sigmar+One|Spicy+Rice|Titan+One|Ubuntu');
+
 body {
 
 	margin:0;
@@ -15,5 +17,13 @@ p {
 	margin:0;
 	display: initial;
 	position: fixed;
+
+}
+
+#startText {
+
+	font-size: 48px;
+	text-align: center;
+	padding: 20%;
 
 }
