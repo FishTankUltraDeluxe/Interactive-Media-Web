@@ -1,0 +1,202 @@
+body {
+
+	margin:0;
+
+}
+
+#splashBacker {
+ 	min-height: 100vh;
+    position: fixed;
+    top: 1000;
+    z-index:-1000;
+
+}
+
+.mainpageH1 {
+	font-weight:700;
+	font-size: 64px;
+	margin-top:16px;
+}
+
+.mainpageP {
+	font-weight:400;
+	font-size: 24px;
+}
+
+#titleDiv {
+
+	display: inherit;
+	position: relative;
+
+}
+
+#titleBacker{
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	transform: translate(-50%, 0%);
+
+	text-align: center;
+	color:#fff;
+	font-family: 'Roboto';
+
+	width: 60%;
+	padding:50px;
+	background:#000000ba;
+	display: block;
+}
+
+#buttonTable {
+	color:#fff;
+	margin:auto;
+
+}
+
+.tableButton {
+    width: 40%;
+    text-align: center;
+    padding: 30px 80px;
+    background: #75757594;
+    font-size: 32px;
+    color:#fff;
+}
+
+.tableButton:hover {
+    width: 40%;
+    text-align: center;
+    padding: 30px 80px;
+    background: #000000cc;
+    font-size: 32px;
+
+}
+
+.tableButton>a {
+	text-decoration:none;
+	color:#fff;
+}
+
+#wepCatTable {
+
+	margin:auto;
+
+}
+
+.wepCatCell {
+	margin:auto;
+	padding: 0 15px;
+}
+
+#wepsTitleBacker {
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	transform: translate(-50%, 0%);
+
+	text-align: center;
+	color:#fff;
+	font-family: 'Roboto';
+
+	width: 60%;
+	padding:50px;
+	color:#000;
+	font-size: 64px;
+}
+
+.wepChooseName {
+	font-size:18px;
+	margin-top:0;
+}
+
+.wepIcon {
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+#tableContainer {
+	padding: 10%;
+}
+
+#wepDataSheet {
+	display:none;
+	font-family: Roboto;
+	font-weight: 400;
+	text-align: left;
+	font-size: 16px;
+	width: 100%;
+}
+
+#armorDataSheet {
+	display:none;
+	font-family: Roboto;
+	font-weight: 400;
+	text-align: left;
+	font-size: 12px;
+	width: 100%;
+}
+
+#dataSheetHeader {
+	font-family: Roboto;
+	text-align: left;
+	font-weight: 700;
+	font-size: 24px;
+}
+
+.listItem {
+	font-weight:400;
+	background:#666;
+	color:#fff;
+	padding:10px;
+}
+
+.listItem:hover {
+	font-weight:400;
+	background:#888;
+	color:#fff;
+	padding:10px;
+}
+
+#statPage {
+
+	margin:0;
+	width:100%;
+	height:100%;
+	background:#000;
+	display:none;
+
+}
+
+#leftColumn {
+
+	float: left;
+	width: 60%;
+	background:#444;
+	height:100vh;
+
+}
+
+#rightColumn {
+
+	float:right;
+	width:40%;
+	background:#aaa;
+	height:100vh;
+
+}
+
+.componentList {
+
+	padding:15px 30px;
+	color: #000;
+
+}
+
+.wepInfo {
+
+	padding:15px 30px;
+	color:#fff;
+
+}
+
+p {
+	margin:0;
+}
