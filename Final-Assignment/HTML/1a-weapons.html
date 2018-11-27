@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<head>
+
+  <title>Page Title</title>
+  <link rel="stylesheet" href="../Stylesheets/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<div id="titleDiv">
+		<div id="wepsTitleBacker">
+			<h1>Weapons</h1>
+
+			<table id="wepCatTable">
+			<tr>
+				<th class="wepCatCell" id="Bow"><img src="../Images/WepIcons/mhw_bow-icon.png" class="wepIcon"><p class="wepChooseName">Bow</p></th>
+
+				<th class="wepCatCell" id="Charge Blade"><img src="../Images/WepIcons/mhw_charge-blade-icon.png" class="wepIcon"><p class="wepChooseName">Charge Blade</p></th>
+
+				<th class="wepCatCell" id="Dual Blade"><img src="../Images/WepIcons/mhw_dual-blades-icon.png" class="wepIcon"><p class="wepChooseName">Dual Blade</p></th>
+
+				<th class="wepCatCell" id="Greatsword"><img src="../Images/WepIcons/mhw_greatsword-icon.png" class="wepIcon"><p class="wepChooseName">Greatsword</p></th>
+
+				<th class="wepCatCell" id="Gunlance"><img src="../Images/WepIcons/mhw_gunlance-icon.png" class="wepIcon"><p class="wepChooseName">Gunlance</p></th>
+
+				<th class="wepCatCell" id="Hammer"><img src="../Images/WepIcons/mhw_hammers-icon.png" class="wepIcon"><p class="wepChooseName">Hammer</p></th>
+
+				<th class="wepCatCell" id="Heavy Bowgun"><img src="../Images/WepIcons/mhw_heavy-bowgun-icon.png" class="wepIcon"><p class="wepChooseName">Heavy Bowgun</p></th>
+
+			</tr>
+			<tr>
+				<th class="wepCatCell" id="Hunting Horn"><img src="../Images/WepIcons/mhw_hunting-horns-icon.png" class="wepIcon"><p class="wepChooseName">Hunting Horn</p></th>
+
+				<th class="wepCatCell" id="Insect Glaive"><img src="../Images/WepIcons/mhw_insect-glaive-icon.png" class="wepIcon"><p class="wepChooseName">Insect Glaive</p></th>
+
+				<th class="wepCatCell" id="Lance"><img src="../Images/WepIcons/mhw_lances-icon.png" class="wepIcon"><p class="wepChooseName">Lance</p></th>
+
+				<th class="wepCatCell" id="Light Bowgun"><img src="../Images/WepIcons/mhw_light-bowgun-icon.png" class="wepIcon"><p class="wepChooseName">Light Bowgun</p></th>
+
+				<th class="wepCatCell" id="Longsword"><img src="../Images/WepIcons/mhw_longswords-icon.png" class="wepIcon"><p class="wepChooseName">Longsword</p></th>
+
+				<th class="wepCatCell" id="Switch Axe"><img src="../Images/WepIcons/mhw_switch-axe-icon.png" class="wepIcon"><p class="wepChooseName"><p class="wepChooseName" id="">Switch Axe</p></th>
+
+				<th class="wepCatCell" id="Sword and Shield"><img src="../Images/WepIcons/mhw_sword-shield-icon.png" class="wepIcon"><p class="wepChooseName">Sword and Shield</p></th>
+
+			</tr>
+		</table>
+
+		</div>
+	</div>
+
+	<div id="tableContainer">
+		<table id="wepDataSheet">
+		<tr id="dataSheetHeader">
+			<th>Item Name</th>
+			<th>Attack</th>
+			<th>Max Sharpness</th>
+			<th>Element</th>
+			<th>Rarity</th>
+		</tr>
+
+		</table>
+
+		<table id="armorDataSheet">
+		<tr id="dataSheetHeader">
+			<th>Item Name</th>
+			<th>Slot</th>
+			<th>Base Defense</th>
+			<th>Skills</th>
+			<th>Rarity</th>
+		</tr>
+		
+		</table>
+	</div>
+
+	<div id="statPage">
+
+		<div id="leftColumn">
+
+			<h1 id="weaponName" class="wepInfo">Weapon Name</h1>
+			<p id="attackPower" class="wepInfo">Weapon Attack</p>
+			<p id="itemCatagory" class="wepInfo">Weapon Catagory</p>
+			<p id="sharp" class="wepInfo">Sharpness Max</p>
+			<p id="element" class="wepInfo">Weapon Element</p>
+			<p id="specialNotes" class="wepInfo">Special Notes</p>
+			<p id="gemSlots" class="wepInfo">Gem Slots</p>
+			<p id="rare" class="wepInfo">Rarity</p>
+
+		</div>
+
+		<div id="rightColumn">
+
+			<h2 id="componentTitle" class="componentList">Components</h2>
+				<div class="componentList">
+					<p id="mat1">Material 1</p>
+					<input id="mat1counter" type="number" value="0" max="1"><p id="quan1"> / #</p>
+				</div>
+				<div class="componentList">
+					<p id="mat2">Material 2</p>
+					<input id="mat2counter" type="number" value="0" max="1"><p id="quan2"> / #</p>
+				</div>
+				<div class="componentList">
+					<p id="mat3">Material 3</p>
+					<input id="mat3counter" type="number" value="0" max="1"><p id="quan3"> / #</p>
+				</div>
+				<div class="componentList">
+					<p id="mat4">Material 4</p>
+					<input id="mat4counter" type="number" value="0" max="1"><p id="quan4"> / #</p>
+				</div>
+				<div class="componentList">
+					<p id="mat5">Material 5</p>
+					<input id="mat5counter" type="number" value="0" max="1"><p id="quan5"> / #</p>
+				</div>
+				<div class="componentList">
+					<p id="mat6">Material 6</p>
+					<input id="mat6counter" type="number" value="0" max="1"><p id="quan6"> / #</p>
+				</div>
+
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../Scripts/scripts.js"></script>
+
+</body>
+
+</html>
