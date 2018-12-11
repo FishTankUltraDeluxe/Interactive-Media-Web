@@ -41,8 +41,8 @@ $("#wepDataSheet").on('click', '.listItem', function () {
 					var wepSha =	data.feed.entry[wepselect].gsx$sharpness.$t;
 					var wepEle = 	data.feed.entry[wepselect].gsx$element.$t;
 					var wepNotes = 	data.feed.entry[wepselect].gsx$special.$t;
-					var wepRare =	data.feed.entry[wepselect].gsx$rarity.$t;
-					var wepGem = 	data.feed.entry[wepselect].gsx$gemslot.$t;
+					// var wepRare =	data.feed.entry[wepselect].gsx$rarity.$t;
+					// var wepGem = 	data.feed.entry[wepselect].gsx$gemslot.$t;
 					var mat1 = 		data.feed.entry[wepselect].gsx$mat1.$t;
 					var mat2 = 		data.feed.entry[wepselect].gsx$mat2.$t;
 					var mat3 = 		data.feed.entry[wepselect].gsx$mat3.$t;
@@ -66,8 +66,8 @@ $("#wepDataSheet").on('click', '.listItem', function () {
 					$("#sharp").text(wepSha);
 					$("#element").text(wepEle);
 					$("#specialNotes").text(wepNotes);
-					$("#gemSlots").text(wepGem);
-					$("#rare").text(wepRare);
+					// $("#gemSlots").text(wepGem);
+					// $("#rare").text(wepRare);
 					$("#mat1").text(mat1 + " | ");
 					$("#quan1").text(" / " + quan1);
 					$("#mat2").text(mat2 + " | ");
@@ -120,19 +120,19 @@ function getWepTData (wepCatagory) {
 			var listLoopCount;
 
 			//For each item in the array (currently the quantity is defined explicitly, a programatic way can come later), check if the item's type matches the Longsword catagory, and if it does, print it on the screen. Otherwise, print the item type in the console, so we know it's skipping over the right ones
-			for (listLoopCount = 0; listLoopCount < 57; listLoopCount++) {
+			for (listLoopCount = 0; listLoopCount < 82; listLoopCount++) {
 
 				if (data.feed.entry[listLoopCount].gsx$itemtype.$t == wepCatagory) {
 
 					var entryID = data.feed.entry[listLoopCount].gsx$entrynum.$t
 					var itemName = data.feed.entry[listLoopCount].gsx$name.$t
-					var cssName = data.feed.entry[listLoopCount].gsx$cssname.$t
+					var cssName = data.feed.entry[listLoopCount].gsx$name.$t
 					var itemAtk = data.feed.entry[listLoopCount].gsx$attack.$t
 					var itemEle = data.feed.entry[listLoopCount].gsx$element.$t
 					var itemSha = data.feed.entry[listLoopCount].gsx$sharpness.$t
-					var itemRare = data.feed.entry[listLoopCount].gsx$rarity.$t
+					// var itemRare = data.feed.entry[listLoopCount].gsx$rarity.$t
 
-					$("#wepDataSheet").append("<tr class='listItem' id='" + entryID + "'><th id='" + entryID + "'>"+itemName+"</th><th id='" + entryID + "'>"+itemAtk+"</th><th id='" + entryID + "'>"+itemSha+"</th><th id='" + entryID + "'>"+itemEle+"</th><th id='" + entryID + "'>"+itemRare+"</th></tr>")
+					$("#wepDataSheet").append("<tr class='listItem' id='" + entryID + "'><th id='" + entryID + "'>"+itemName+"</th><th id='" + entryID + "'>"+itemAtk+"</th><th id='" + entryID + "'>"+itemSha+"</th><th id='" + entryID + "'>"+itemEle+"</th></tr>")
 					// $(".results").append("<p>Weapon: "+itemName+" | Attack Power: "+itemAtk+" | Catagory: "+itemType+" | Sharpness: "+itemSha+"</p>")
 
 				}
