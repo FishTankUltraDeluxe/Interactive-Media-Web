@@ -233,7 +233,7 @@ th {
 	float: left;
 	width: 60%;
 	background:#736342;
-	height:100vh;
+	height:90vh;
 
 
 }
@@ -243,7 +243,7 @@ th {
 	float:right;
 	width:40%;
 	background:#928467;
-	height:100vh;
+	height:90vh;
 
 }
 
@@ -312,7 +312,7 @@ input {
 
 		float:none;
 		width:100%;
-		height:50vh;
+		height:45vh;
 
 	}
 
@@ -320,7 +320,7 @@ input {
 
 		float:none;
 		width:100%;
-		height:50vh;
+		height:45vh;
 
 	}
 
@@ -338,7 +338,7 @@ input {
 
 		float:none;
 		width:100%;
-		height:60vh;
+		height:50vh;
 
 	}
 
@@ -346,13 +346,58 @@ input {
 
 		float:none;
 		width:100%;
-		height:40vh;
+		height:30vh;
 
 	}
 }
 
 p {
 	margin:0;
+}
+
+.backButton {
+
+	font-size:24px;
+	background:#5d5341;
+	border:0;
+	padding:15px;
+	margin-top:50px;
+	width:100%;
+	color: #fff;
+	display:none;
+	font-weight: 900;
+
+}
+
+.backButton:hover{
+
+	background:#fff;
+	color:#5d5341;
+	font-weight: 900;
+
+}
+
+.backButtonInfo {
+
+	font-size:24px;
+	background:#5d5341;
+	border:0;
+	padding:15px;
+	width:100%;
+	height:10vh;
+	color: #fff;
+	display:none;
+	font-weight: 900;
+	display:inline-block;
+
+}
+
+.backButtonInfo:hover{
+
+	background:#fff;
+	color:#5d5341;
+	font-weight: 900;
+
 }
 
 /*.mainpageH1 {

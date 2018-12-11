@@ -8,7 +8,21 @@ var wepsUrl = "https://spreadsheets.google.com/feeds/list/" + weaponsSheet + "/o
 var armUrl = "https://spreadsheets.google.com/feeds/list/" + armorSheet + "/od6/public/values?alt=json";
 var matsUrl = "https://spreadsheets.google.com/feeds/list/" + materialsSheet + "/od6/public/values?alt=json";
 
+$(".backButton").click(function(){
 
+
+	$("#wepDataSheet").fadeOut();
+	$(".listItem").remove();
+	$("#buttonContainer").fadeIn();
+	$(".backButton").fadeOut();	
+
+})
+
+$(".backButtonInfo").click(function(){
+
+	location.reload();
+
+})
 
 //When a weapon in the type selection table is clicked, store what was clicked for use on the next page.
 $(".wepChooseName").click(function() {
@@ -20,6 +34,7 @@ $(".wepChooseName").click(function() {
 
 			$("#buttonContainer").fadeOut();
 			$("#wepDataSheet").fadeIn();
+			$(".backButton").fadeIn();
 			getWepTData (searchCat);
 
 })
@@ -58,8 +73,6 @@ $("#wepDataSheet").on('click', '.listItem', function () {
 
 					$("#tableContainer").fadeOut();
 
-					$("#statPage").fadeIn();
-
 					$("#weaponName").text(wepName);
 					$("#attackPower").text(wepAtk);
 					$("#itemCatagory").text(wepCat);
@@ -93,9 +106,10 @@ $("#wepDataSheet").on('click', '.listItem', function () {
 					$("#mat4counter").attr("max", quan4);
 					// $("#mat5counter").attr("max", quan5);
 					// $("#mat6counter").attr("max", quan6);
-
+					
 			}
 		});
+	$("#statPage").fadeIn();
 
 });
 
