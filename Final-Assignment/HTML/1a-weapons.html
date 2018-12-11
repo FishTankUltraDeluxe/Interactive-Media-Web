@@ -55,47 +55,80 @@
 
 		<div id="leftColumn">
 
-			<h1 id="weaponName" class="wepInfo">Weapon Name</h1>
-			<p id="attackPower" class="wepInfo">Weapon Attack</p>
-			<p id="itemCatagory" class="wepInfo">Weapon Catagory</p>
-			<p id="sharp" class="wepInfo">Sharpness Max</p>
-			<p id="element" class="wepInfo">Weapon Element</p>
-			<p id="specialNotes" class="wepInfo">Special Notes</p>
-			<p id="gemSlots" class="wepInfo">Gem Slots</p>
-			<p id="rare" class="wepInfo">Rarity</p>
+			<div class="infoContainerName">
+				<h1 id="weaponName" class="wepInfo">Weapon Name</h1>
+			</div>
+
+			<div class="infoContainer">
+				<h3>Attack Power</h3>
+				<p id="attackPower" class="wepInfo">Weapon Attack</p>
+			</div>
+			
+			<div class="infoContainer">
+				<h3>Weapon Catagory</h3>
+				<p id="itemCatagory" class="wepInfo">Weapon Catagory</p>
+			</div>
+
+			<div class="infoContainer">
+				<h3>Maximum Sharpness</h3>
+				<p id="sharp" class="wepInfo">Sharpness Max</p>
+			</div>
+			
+			<div class="infoContainer">
+				<h3>Weapon Element</h3>
+				<p id="element" class="wepInfo">Weapon Element</p>
+			</div>
+
+			<div class="infoContainer">
+				<h3>Notes</h3>
+				<p id="specialNotes" class="wepInfo">Special Notes</p>
+			</div>
+
+			<div class="infoContainer">
+				<h3>Gem Slots</h3>
+				<p id="gemSlots" class="wepInfo">Gem Slots</p>
+			</div>
+			
+			<div class="infoContainer">
+				<h3>Rarity Level</h3>
+				<p id="rare" class="wepInfo">Rarity</p>
+			</div>
 
 		</div>
 
 		<div id="rightColumn">
 
-			<h2 id="componentTitle" class="componentList">Components</h2>
-				<div class="componentList" id="comp1">
-					<p id="mat1">Material 1</p>
-					<input id="mat1counter" type="number" value="0" max="1" min="0"><p id="quan1"> / #</p>
-				</div>
-				<div class="componentList" id="comp2">
-					<p id="mat2">Material 2</p>
-					<input id="mat2counter" type="number" value="0" max="1" min="0"><p id="quan2"> / #</p>
-				</div>
-				<div class="componentList" id="comp3">
-					<p id="mat3">Material 3</p>
-					<input id="mat3counter" type="number" value="0" max="1" min="0"><p id="quan3"> / #</p>
-				</div>
-				<div class="componentList" id="comp4">
-					<p id="mat4">Material 4</p>
-					<input id="mat4counter" type="number" value="0" max="1" min="0"><p id="quan4"> / #</p>
-				</div>
-				<div class="componentList" id="comp5">
-					<p id="mat5">Material 5</p>
-					<input id="mat5counter" type="number" value="0" max="1" min="0"><p id="quan5"> / #</p>
-				</div>
-				<div class="componentList" id="comp6">
-					<p id="mat6">Material 6</p>
-					<input id="mat6counter" type="number" value="0" max="1" min="0"><p id="quan6"> / #</p>
+			<div id="rColumnContents">
+
+				<h1 id="componentTitle">Components</h1>
+					<div class="componentList" id="comp1">
+						<p id="mat1" class="compPiece">Material 1</p>
+						<input id="mat1counter" class="compPiece" type="number" value="0" max="1" min="0"><p id="quan1" class="compPiece"> / #</p>
+					</div>
+					<div class="componentList" id="comp2">
+						<p id="mat2" class="compPiece">Material 2</p>
+						<input id="mat2counter" class="compPiece" type="number" value="0" max="1" min="0"><p id="quan2" class="compPiece"> / #</p>
+					</div>
+					<div class="componentList" id="comp3">
+						<p id="mat3" class="compPiece">Material 3</p>
+						<input id="mat3counter" class="compPiece" type="number" value="0" max="1" min="0"><p id="quan3" class="compPiece"> / #</p>
+					</div>
+					<div class="componentList" id="comp4">
+						<p id="mat4" class="compPiece">Material 4</p>
+						<input id="mat4counter" class="compPiece" type="number" value="0" max="1" min="0"><p id="quan4" class="compPiece"> / #</p>
+					</div>
+<!-- 					<div class="componentList" id="comp5">
+						<p id="mat5" class="compPiece">Material 5</p>
+						<input id="mat5counter" class="compPiece" type="number" value="0" max="1" min="0"><p id="quan5" class="compPiece"> / #</p>
+					</div>
+					<div class="componentList" id="comp6">
+						<p id="mat6" class="compPiece">Material 6</p>
+						<input id="mat6counter" class="compPiece" type="number" value="0" max="1" min="0"><p id="quan6" class="compPiece"> / #</p>
+					</div> -->
+
 				</div>
 
 		</div>
-
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

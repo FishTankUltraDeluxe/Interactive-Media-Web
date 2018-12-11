@@ -47,15 +47,14 @@ $("#wepDataSheet").on('click', '.listItem', function () {
 					var mat2 = 		data.feed.entry[wepselect].gsx$mat2.$t;
 					var mat3 = 		data.feed.entry[wepselect].gsx$mat3.$t;
 					var mat4 = 		data.feed.entry[wepselect].gsx$mat4.$t;
-					var mat5 = 		data.feed.entry[wepselect].gsx$mat5.$t;
-					var mat6 = 		data.feed.entry[wepselect].gsx$mat6.$t;
+					// var mat5 = 		data.feed.entry[wepselect].gsx$mat5.$t;
+					// var mat6 = 		data.feed.entry[wepselect].gsx$mat6.$t;
 					var quan1 = 	data.feed.entry[wepselect].gsx$quantity1.$t;
 					var quan2 = 	data.feed.entry[wepselect].gsx$quantity2.$t;
 					var quan3 = 	data.feed.entry[wepselect].gsx$quantity3.$t;
 					var quan4 = 	data.feed.entry[wepselect].gsx$quantity4.$t;
-					var quan5 = 	data.feed.entry[wepselect].gsx$quantity5.$t;
-					var quan6 = 	data.feed.entry[wepselect].gsx$quantity6.$t;
-					var cost = 		data.feed.entry[wepselect].gsx$cost.$t;				
+					// var quan5 = 	data.feed.entry[wepselect].gsx$quantity5.$t;
+					// // var quan6 = 	data.feed.entry[wepselect].gsx$quantity6.$t;			
 
 					$("#tableContainer").fadeOut();
 
@@ -66,34 +65,34 @@ $("#wepDataSheet").on('click', '.listItem', function () {
 					$("#itemCatagory").text(wepCat);
 					$("#sharp").text(wepSha);
 					$("#element").text(wepEle);
-					$("#specialNotes").text(wepRare);
+					$("#specialNotes").text(wepNotes);
 					$("#gemSlots").text(wepGem);
 					$("#rare").text(wepRare);
-					$("#mat1").text(mat1);
-					$("#quan1").text(quan1);
-					$("#mat2").text(mat2);
-					$("#quan2").text(quan2);
-					$("#mat3").text(mat3);
-					$("#quan3").text(quan3);
-					$("#mat4").text(mat4);
-					$("#quan4").text(quan4);
-					$("#mat5").text(mat5);
-					$("#quan5").text(quan5);
-					$("#mat6").text(mat6);
-					$("#quan6").text(quan6);
+					$("#mat1").text(mat1 + " | ");
+					$("#quan1").text(" / " + quan1);
+					$("#mat2").text(mat2 + " | ");
+					$("#quan2").text(" / " + quan2);
+					$("#mat3").text(mat3 + " | ");
+					$("#quan3").text(" / " + quan3);
+					$("#mat4").text(mat4 + " | ");
+					$("#quan4").text(" / " + quan4);
+					// $("#mat5").text(mat5 + " | ");
+					// $("#quan5").text(" / " + quan5);
+					// $("#mat6").text(mat6 + " | ");
+					// $("#quan6").text(" / " + quan6);
 
 					emptyCheck(quan1, "#comp1")
 					emptyCheck(quan2, "#comp2")
 					emptyCheck(quan3, "#comp3")
 					emptyCheck(quan4, "#comp4")
-					emptyCheck(quan5, "#comp5")
-					emptyCheck(quan6, "#comp6")
-					// $("#mat1counter").attr("max", quan1);
+					// emptyCheck(quan5, "#comp5")
+					// emptyCheck(quan6, "#comp6")
+					$("#mat1counter").attr("max", quan1);
 					$("#mat2counter").attr("max", quan2);
 					$("#mat3counter").attr("max", quan3);
 					$("#mat4counter").attr("max", quan4);
-					$("#mat5counter").attr("max", quan5);
-					$("#mat6counter").attr("max", quan6);
+					// $("#mat5counter").attr("max", quan5);
+					// $("#mat6counter").attr("max", quan6);
 
 			}
 		});
@@ -121,7 +120,7 @@ function getWepTData (wepCatagory) {
 			var listLoopCount;
 
 			//For each item in the array (currently the quantity is defined explicitly, a programatic way can come later), check if the item's type matches the Longsword catagory, and if it does, print it on the screen. Otherwise, print the item type in the console, so we know it's skipping over the right ones
-			for (listLoopCount = 0; listLoopCount < 2; listLoopCount++) {
+			for (listLoopCount = 0; listLoopCount < 57; listLoopCount++) {
 
 				if (data.feed.entry[listLoopCount].gsx$itemtype.$t == wepCatagory) {
 
