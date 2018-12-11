@@ -7,13 +7,14 @@
 
 </head>
 
-<body>
+<body id="wepPage">
 
 <!-- This HTML is for the weapon selection page, where a user will pick the weapon they want to look up -->
 
-	<div id="titleDiv">
-		<div id="wepsTitleBacker">
-			<h1>Weapons</h1>
+	<div>
+		<div id="buttonContainer">
+			<h1 id="pageTitle">Weapons</h1>
+			<p id="subtitle">Choose a weapon catagory</p>
 
 				<button type="button" class="wepChooseName" id="Bow">Bows</button>
 				<button type="button" class="wepChooseName" id="Charge Blade">Charge Blades</button>
@@ -46,17 +47,6 @@
 		</tr>
 
 		</table>
-
-		<table id="armorDataSheet">
-		<tr id="dataSheetHeader">
-			<th>Item Name</th>
-			<th>Slot</th>
-			<th>Base Defense</th>
-			<th>Skills</th>
-			<th>Rarity</th>
-		</tr>
-		
-		</table>
 	</div>
 
 <!-- And this chunk of HTML is for the weapons statistics page, complete with empty entries -->
@@ -79,29 +69,29 @@
 		<div id="rightColumn">
 
 			<h2 id="componentTitle" class="componentList">Components</h2>
-				<div class="componentList">
+				<div class="componentList" id="comp1">
 					<p id="mat1">Material 1</p>
-					<input id="mat1counter" type="number" value="0" max="1"><p id="quan1"> / #</p>
+					<input id="mat1counter" type="number" value="0" max="1" min="0"><p id="quan1"> / #</p>
 				</div>
-				<div class="componentList">
+				<div class="componentList" id="comp2">
 					<p id="mat2">Material 2</p>
-					<input id="mat2counter" type="number" value="0" max="1"><p id="quan2"> / #</p>
+					<input id="mat2counter" type="number" value="0" max="1" min="0"><p id="quan2"> / #</p>
 				</div>
-				<div class="componentList">
+				<div class="componentList" id="comp3">
 					<p id="mat3">Material 3</p>
-					<input id="mat3counter" type="number" value="0" max="1"><p id="quan3"> / #</p>
+					<input id="mat3counter" type="number" value="0" max="1" min="0"><p id="quan3"> / #</p>
 				</div>
-				<div class="componentList">
+				<div class="componentList" id="comp4">
 					<p id="mat4">Material 4</p>
-					<input id="mat4counter" type="number" value="0" max="1"><p id="quan4"> / #</p>
+					<input id="mat4counter" type="number" value="0" max="1" min="0"><p id="quan4"> / #</p>
 				</div>
-				<div class="componentList">
+				<div class="componentList" id="comp5">
 					<p id="mat5">Material 5</p>
-					<input id="mat5counter" type="number" value="0" max="1"><p id="quan5"> / #</p>
+					<input id="mat5counter" type="number" value="0" max="1" min="0"><p id="quan5"> / #</p>
 				</div>
-				<div class="componentList">
+				<div class="componentList" id="comp6">
 					<p id="mat6">Material 6</p>
-					<input id="mat6counter" type="number" value="0" max="1"><p id="quan6"> / #</p>
+					<input id="mat6counter" type="number" value="0" max="1" min="0"><p id="quan6"> / #</p>
 				</div>
 
 		</div>

@@ -15,19 +15,27 @@ body {
 
 }
 
-	#landingHeader{
+#landingHeader{
 
 		font-size: 42px;
 
-	}
+}
 
-	#landingIntro{
+#landingIntro{
 
 		font-size: 20px;
 		
-	}
+}
 
 @media only screen and (max-width: 600px) {
+
+	#landingTXTBlock {
+
+		padding:15px;
+		padding-top:0vh;
+		padding-bottom:0vh;
+
+	}
 
 	#landingHeader{
 
@@ -39,6 +47,12 @@ body {
 
 		font-size: 52px;
 		
+	}
+
+	#landingButton {
+
+		font-size:54px;
+
 	}
 
 }
@@ -70,6 +84,14 @@ body {
 
 }
 
+#wepPage {
+
+	background:#928467;
+	color:#fff;
+	font-family: Roboto;
+
+}
+
 #wepCatTable {
 
 	margin:auto;
@@ -81,26 +103,66 @@ body {
 	padding: 0 15px;
 }
 
-#wepsTitleBacker {
+#pageTitle {
+
+	font-size: 64px;
+	margin:0;
+	padding-top:10vh;
+	padding-bottom: 15px;
+
+}
+
+@media only screen and (max-width: 1030px) {
+
+	#pageTitle{
+
+		padding-top:5vh;
+
+	}
+
+}
+
+@media only screen and (max-width: 840px) {
+
+	#pageTitle{
+
+		padding-top:0vh;
+
+	}
+
+}
+
+#subtitle {
+
+	font-size:24px;
+	padding:15px 30px 30px 30px;
+
+}
+
+#buttonContainer {
 	position: absolute;
 	top: 50px;
 	left: 50%;
 	transform: translate(-50%, 0%);
 
 	text-align: center;
-	color:#fff;
 	font-family: 'Roboto';
-
-	width: 60%;
-	padding:50px;
-	color:#000;
-	font-size: 64px;
 }
 
 .wepChooseName {
-	font-size:18px;
-	margin-top:0;
-	background: ;
+	font-size:24px;
+	background:#5d5341;
+	border:0;
+	padding:15px;
+	margin: 10px;
+	color: #fff;
+}
+
+.wepChooseName:hover{
+
+	background:#fff;
+	color:#5d5341;
+
 }
 
 .wepIcon {
@@ -137,17 +199,22 @@ body {
 	font-size: 24px;
 }
 
+th {
+
+	padding:10px;
+
+}
+
 .listItem {
 	font-weight:400;
-	background:#666;
+	background:#5d5341;
 	color:#fff;
-	padding:10px;
 }
 
 .listItem:hover {
 	font-weight:400;
-	background:#888;
-	color:#fff;
+	background:#fff;
+	color:#5d5341;
 	padding:10px;
 }
 

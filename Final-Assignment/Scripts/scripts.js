@@ -18,21 +18,9 @@ $(".wepChooseName").click(function() {
 	searchCat = $(this).attr("id");
 	// console.log(searchCat);
 
-		//check if we're calling up the weapons table arrangment or the armor table arrangement
-
-		if (searchCat == "Armor") {
-
-			$("#titleDiv").fadeOut();			
-			$("#armorDataSheet").fadeIn();
-
-		} else {
-
-			$("#titleDiv").fadeOut();
+			$("#buttonContainer").fadeOut();
 			$("#wepDataSheet").fadeIn();
-			// console.log("searchCat is not armor!")
 			getWepTData (searchCat);
-
-		}
 
 })
 
@@ -94,17 +82,33 @@ $("#wepDataSheet").on('click', '.listItem', function () {
 					$("#mat6").text(mat6);
 					$("#quan6").text(quan6);
 
-					$("#mat1counter").css("max", quan1);
-					$("#mat2counter").css("max", quan2);
-					$("#mat3counter").css("max", quan3);
-					$("#mat4counter").css("max", quan4);
-					$("#mat5counter").css("max", quan5);
-					$("#mat6counter").css("max", quan6);
+					emptyCheck(quan1, "#comp1")
+					emptyCheck(quan2, "#comp2")
+					emptyCheck(quan3, "#comp3")
+					emptyCheck(quan4, "#comp4")
+					emptyCheck(quan5, "#comp5")
+					emptyCheck(quan6, "#comp6")
+					// $("#mat1counter").attr("max", quan1);
+					$("#mat2counter").attr("max", quan2);
+					$("#mat3counter").attr("max", quan3);
+					$("#mat4counter").attr("max", quan4);
+					$("#mat5counter").attr("max", quan5);
+					$("#mat6counter").attr("max", quan6);
 
 			}
 		});
 
 });
+
+function emptyCheck (matValue, matID) {
+
+	if (matValue == "-") {
+		$(matID).fadeOut();
+	} else {
+		$(matID).fadeIn();
+		$(matID).attr("max", matValue);
+	}
+}
 
 // This function accesses the Google Sheet and lists the values that match the criteria
 function getWepTData (wepCatagory) {
