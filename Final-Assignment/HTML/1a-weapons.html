@@ -9,47 +9,31 @@
 
 <body>
 
+<!-- This HTML is for the weapon selection page, where a user will pick the weapon they want to look up -->
+
 	<div id="titleDiv">
 		<div id="wepsTitleBacker">
 			<h1>Weapons</h1>
 
-			<table id="wepCatTable">
-			<tr>
-				<th class="wepCatCell" id="Bow"><img src="../Images/WepIcons/mhw_bow-icon.png" class="wepIcon"><p class="wepChooseName">Bow</p></th>
-
-				<th class="wepCatCell" id="Charge Blade"><img src="../Images/WepIcons/mhw_charge-blade-icon.png" class="wepIcon"><p class="wepChooseName">Charge Blade</p></th>
-
-				<th class="wepCatCell" id="Dual Blade"><img src="../Images/WepIcons/mhw_dual-blades-icon.png" class="wepIcon"><p class="wepChooseName">Dual Blade</p></th>
-
-				<th class="wepCatCell" id="Greatsword"><img src="../Images/WepIcons/mhw_greatsword-icon.png" class="wepIcon"><p class="wepChooseName">Greatsword</p></th>
-
-				<th class="wepCatCell" id="Gunlance"><img src="../Images/WepIcons/mhw_gunlance-icon.png" class="wepIcon"><p class="wepChooseName">Gunlance</p></th>
-
-				<th class="wepCatCell" id="Hammer"><img src="../Images/WepIcons/mhw_hammers-icon.png" class="wepIcon"><p class="wepChooseName">Hammer</p></th>
-
-				<th class="wepCatCell" id="Heavy Bowgun"><img src="../Images/WepIcons/mhw_heavy-bowgun-icon.png" class="wepIcon"><p class="wepChooseName">Heavy Bowgun</p></th>
-
-			</tr>
-			<tr>
-				<th class="wepCatCell" id="Hunting Horn"><img src="../Images/WepIcons/mhw_hunting-horns-icon.png" class="wepIcon"><p class="wepChooseName">Hunting Horn</p></th>
-
-				<th class="wepCatCell" id="Insect Glaive"><img src="../Images/WepIcons/mhw_insect-glaive-icon.png" class="wepIcon"><p class="wepChooseName">Insect Glaive</p></th>
-
-				<th class="wepCatCell" id="Lance"><img src="../Images/WepIcons/mhw_lances-icon.png" class="wepIcon"><p class="wepChooseName">Lance</p></th>
-
-				<th class="wepCatCell" id="Light Bowgun"><img src="../Images/WepIcons/mhw_light-bowgun-icon.png" class="wepIcon"><p class="wepChooseName">Light Bowgun</p></th>
-
-				<th class="wepCatCell" id="Longsword"><img src="../Images/WepIcons/mhw_longswords-icon.png" class="wepIcon"><p class="wepChooseName">Longsword</p></th>
-
-				<th class="wepCatCell" id="Switch Axe"><img src="../Images/WepIcons/mhw_switch-axe-icon.png" class="wepIcon"><p class="wepChooseName"><p class="wepChooseName" id="">Switch Axe</p></th>
-
-				<th class="wepCatCell" id="Sword and Shield"><img src="../Images/WepIcons/mhw_sword-shield-icon.png" class="wepIcon"><p class="wepChooseName">Sword and Shield</p></th>
-
-			</tr>
-		</table>
+				<button type="button" class="wepChooseName" id="Bow">Bows</button>
+				<button type="button" class="wepChooseName" id="Charge Blade">Charge Blades</button>
+				<button type="button" class="wepChooseName" id="Dual Blade">Dual Blades</button>
+				<button type="button" class="wepChooseName" id="Greatsword">Greatswords</button>
+				<button type="button" class="wepChooseName" id="Gunlance">Gunlances</button>
+				<button type="button" class="wepChooseName" id="Hammer">Hammers</button>
+				<button type="button" class="wepChooseName" id="Heavy Bowgun">Heavy Bowguns</button>
+				<button type="button" class="wepChooseName" id="Hunting Horn">Hunting Horns</button>
+				<button type="button" class="wepChooseName" id="Insect Glaive">Insect Glaives</button>
+				<button type="button" class="wepChooseName" id="Lance">Lances</button>
+				<button type="button" class="wepChooseName" id="Light Bowgun">Light Bowguns</button>
+				<button type="button" class="wepChooseName" id="Longsword">Longswords</button>
+				<button type="button" class="wepChooseName" id="Switch Axe">Switch Axes</button>
+				<button type="button" class="wepChooseName" id="Sword and Shield">Sword and Shields</button>
 
 		</div>
 	</div>
+
+<!-- This chunk of HTML is for the weapons table, which is dynamically populated using JQuery and Google Sheets -->
 
 	<div id="tableContainer">
 		<table id="wepDataSheet">
@@ -74,6 +58,8 @@
 		
 		</table>
 	</div>
+
+<!-- And this chunk of HTML is for the weapons statistics page, complete with empty entries -->
 
 	<div id="statPage">
 
@@ -126,5 +112,44 @@
     <script src="../Scripts/scripts.js"></script>
 
 </body>
+
+<!-- Old weapon selection code -->
+
+<!-- <table id="wepCatTable">
+				<tr>
+					<th class="wepCatCell" id="Bow"><img src="../Images/WepIcons/mhw_bow-icon.png" class="wepIcon"><p class="wepChooseName">Bow</p></th>
+
+					<th class="wepCatCell" id="Charge Blade"><img src="../Images/WepIcons/mhw_charge-blade-icon.png" class="wepIcon"><p class="wepChooseName">Charge Blade</p></th>
+
+					<th class="wepCatCell" id="Dual Blade"><img src="../Images/WepIcons/mhw_dual-blades-icon.png" class="wepIcon"><p class="wepChooseName">Dual Blade</p></th>
+
+					<th class="wepCatCell" id="Greatsword"><img src="../Images/WepIcons/mhw_greatsword-icon.png" class="wepIcon"><p class="wepChooseName">Greatsword</p></th>
+
+					<th class="wepCatCell" id="Gunlance"><img src="../Images/WepIcons/mhw_gunlance-icon.png" class="wepIcon"><p class="wepChooseName">Gunlance</p></th>
+
+					<th class="wepCatCell" id="Hammer"><img src="../Images/WepIcons/mhw_hammers-icon.png" class="wepIcon"><p class="wepChooseName">Hammer</p></th>
+
+					<th class="wepCatCell" id="Heavy Bowgun"><img src="../Images/WepIcons/mhw_heavy-bowgun-icon.png" class="wepIcon"><p class="wepChooseName">Heavy Bowgun</p></th>
+
+				</tr>
+			
+				<tr>
+					<th class="wepCatCell" id="Hunting Horn"><img src="../Images/WepIcons/mhw_hunting-horns-icon.png" class="wepIcon"><p class="wepChooseName">Hunting Horn</p></th>
+
+					<th class="wepCatCell" id="Insect Glaive"><img src="../Images/WepIcons/mhw_insect-glaive-icon.png" class="wepIcon"><p class="wepChooseName">Insect Glaive</p></th>
+
+					<th class="wepCatCell" id="Lance"><img src="../Images/WepIcons/mhw_lances-icon.png" class="wepIcon"><p class="wepChooseName">Lance</p></th>
+
+					<th class="wepCatCell" id="Light Bowgun"><img src="../Images/WepIcons/mhw_light-bowgun-icon.png" class="wepIcon"><p class="wepChooseName">Light Bowgun</p></th>
+
+					<th class="wepCatCell" id="Longsword"><img src="../Images/WepIcons/mhw_longswords-icon.png" class="wepIcon"><p class="wepChooseName">Longsword</p></th>
+
+					<th class="wepCatCell" id="Switch Axe"><img src="../Images/WepIcons/mhw_switch-axe-icon.png" class="wepIcon"><p class="wepChooseName"><p class="wepChooseName" id="">Switch Axe</p></th>
+
+					<th class="wepCatCell" id="Sword and Shield"><img src="../Images/WepIcons/mhw_sword-shield-icon.png" class="wepIcon"><p class="wepChooseName">Sword and Shield</p></th>
+
+				</tr>
+		</table> -->
+
 
 </html>

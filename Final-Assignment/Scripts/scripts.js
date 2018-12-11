@@ -11,7 +11,7 @@ var matsUrl = "https://spreadsheets.google.com/feeds/list/" + materialsSheet + "
 
 
 //When a weapon in the type selection table is clicked, store what was clicked for use on the next page.
-$(".wepCatCell").click(function() {
+$(".wepChooseName").click(function() {
 	
 	var searchCat = "null";
 
@@ -49,7 +49,7 @@ $("#wepDataSheet").on('click', '.listItem', function () {
 
 					var wepName = 	data.feed.entry[wepselect].gsx$name.$t;
 					var wepAtk = 	data.feed.entry[wepselect].gsx$attack.$t;
-					var wepCat = 	data.feed.entry[wepselect].gsx$itemtype.$t;			
+					var wepCat = 	data.feed.entry[wepselect].gsx$itemtype.$t;
 					var wepSha =	data.feed.entry[wepselect].gsx$sharpness.$t;
 					var wepEle = 	data.feed.entry[wepselect].gsx$element.$t;
 					var wepNotes = 	data.feed.entry[wepselect].gsx$special.$t;
@@ -65,7 +65,7 @@ $("#wepDataSheet").on('click', '.listItem', function () {
 					var quan2 = 	data.feed.entry[wepselect].gsx$quantity2.$t;
 					var quan3 = 	data.feed.entry[wepselect].gsx$quantity3.$t;
 					var quan4 = 	data.feed.entry[wepselect].gsx$quantity4.$t;
-					var quan5 = 	data.feed.entry[wepselect].gsx$quantity5.$t;	
+					var quan5 = 	data.feed.entry[wepselect].gsx$quantity5.$t;
 					var quan6 = 	data.feed.entry[wepselect].gsx$quantity6.$t;
 					var cost = 		data.feed.entry[wepselect].gsx$cost.$t;				
 

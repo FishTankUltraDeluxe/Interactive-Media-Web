@@ -4,75 +4,42 @@ body {
 
 }
 
+#landingTXTBlock {
+
+	position:absolute;
+	padding:30px;
+	font-family: Roboto;
+	color:#fff;
+	padding-top:20vh;
+	padding-bottom:20vh;
+
+}
+
+#landingButton {
+
+	font-size: 24px;
+	margin-top:30px;
+	padding:15px;
+	font-weight:700;
+	background:#5d5341;
+	border:0;
+	color:#fff;
+
+}
+
+#landingButton:hover{
+
+	background:#fff;
+	color:#5d5341;
+
+}
+
 #splashBacker {
  	min-height: 100vh;
     position: fixed;
     top: 1000;
     z-index:-1000;
 
-}
-
-.mainpageH1 {
-	font-weight:700;
-	font-size: 64px;
-	margin-top:16px;
-}
-
-.mainpageP {
-	font-weight:400;
-	font-size: 24px;
-}
-
-#titleDiv {
-
-	display: inherit;
-	position: relative;
-
-}
-
-#titleBacker{
-	position: absolute;
-	top: 50px;
-	left: 50%;
-	transform: translate(-50%, 0%);
-
-	text-align: center;
-	color:#fff;
-	font-family: 'Roboto';
-
-	width: 60%;
-	padding:50px;
-	background:#000000ba;
-	display: block;
-}
-
-#buttonTable {
-	color:#fff;
-	margin:auto;
-
-}
-
-.tableButton {
-    width: 40%;
-    text-align: center;
-    padding: 30px 80px;
-    background: #75757594;
-    font-size: 32px;
-    color:#fff;
-}
-
-.tableButton:hover {
-    width: 40%;
-    text-align: center;
-    padding: 30px 80px;
-    background: #000000cc;
-    font-size: 32px;
-
-}
-
-.tableButton>a {
-	text-decoration:none;
-	color:#fff;
 }
 
 #wepCatTable {
@@ -105,6 +72,7 @@ body {
 .wepChooseName {
 	font-size:18px;
 	margin-top:0;
+	background: ;
 }
 
 .wepIcon {
@@ -200,3 +168,67 @@ body {
 p {
 	margin:0;
 }
+
+/*.mainpageH1 {
+	font-weight:700;
+	font-size: 64px;
+	margin-top:16px;
+}
+
+.mainpageP {
+	font-weight:400;
+	font-size: 24px;
+	padding-bottom: 30px;
+}
+*/
+/*#titleDiv {
+
+	display: inherit;
+	position: relative;
+
+}*/
+
+/*#titleBacker{
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	transform: translate(-50%, 0%);
+
+	text-align: center;
+	color:#fff;
+	font-family: 'Roboto';
+
+	width: 60%;
+	padding:50px;
+	background:#000000ba;
+	display: block;
+}*/
+
+/*#buttonTable {
+	color:#fff;
+	margin:auto;
+
+}*/
+
+/*.tableButton {
+    width: 40%;
+    text-align: center;
+    padding: 30px 80px;
+    background: #75757594;
+    font-size: 32px;
+    color:#fff;
+}
+
+.tableButton:hover {
+    width: 40%;
+    text-align: center;
+    padding: 30px 80px;
+    background: #000000cc;
+    font-size: 32px;
+
+}
+
+.tableButton>a {
+	text-decoration:none;
+	color:#fff;
+}*/

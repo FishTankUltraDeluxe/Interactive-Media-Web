@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <head>
 
-  <title>Page Title</title>
+  <title>MHW Cookbook | Home</title>
   <link rel="stylesheet" href="Stylesheets/style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
 
@@ -9,26 +9,17 @@
 
 <body>
 
-	<div id="titleDiv">
-		<div id="titleBacker">
-			<h1 class="mainpageH1">Monster Hunter World Crafting Cheatsheet</h1>
-			<p class="mainpageP">A quick-reference for weapon and armor crafting requirments, materials, and where to get them</p>
-			<p class="mainpageP">Choose one of the two options below to get started</p>
-			
-			<div>
-				<table id="buttonTable">
-					<tr>
-						<th class="tableButton"><a href="HTML\1a-weapons.html">Weapons</a></th>
-						<th class="tableButton"><a href="HTML\1b-armor.html">Armor</a></th>
-					</tr>
-				</table>
-			</div>
+	<div id="landingTXTBlock">
 
-		</div>
+		<h1 id="landingHeader">Monster Hunter World Rare Weapon Cookbook</h1>
+		<p id="landingIntro">Your quick reference guide to material requirements for end-game weapons</p>
+		<form action="HTML\1a-weapons.html">
+			<button type="submit" value="Click to Get Started" id="landingButton">Click to get started</button>
+		</form>
 
 	</div>
 	
-	<img src="Images/Backgrounds/landing-backer.jpg" id="splashBacker">
+	<img src="Images/Backgrounds/MapBG.jpg" id="splashBacker">
 
 	<div class="results"></div>
 
@@ -36,5 +27,30 @@
     <script src="Scripts/scripts.js"></script>
 
 </body>
+
+<!-- Old title and button HTML -->
+
+<!-- 		
+
+	<div id="titleDiv">
+
+		<div id="titleBacker">
+			<h1 class="mainpageH1">Monster Hunter World Crafting Cheatsheet</h1>
+			<p class="mainpageP">A quick-reference for high-level weapon crafting requirments</p>
+			<p class="mainpageP">Click the button below to get started</p>
+			
+			<div>
+				<table id="buttonTable">
+					<tr>
+						<th class="tableButton"><a href="HTML\1a-weapons.html">Weapons</a></th>
+					</tr>
+				</table>
+			</div>
+
+		</div> 
+	</div>
+
+	-->
+
 
 </html>
